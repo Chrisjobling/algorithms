@@ -9,27 +9,27 @@ internal class LinearSearchKtTest {
 
     @Test
     fun shouldReturnUnsuccessfulOnEmptyArray() {
-        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(),0))
+        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(), 0))
     }
 
     @Test
     fun shouldReturnUnsuccessfulOnInvalidTarget() {
-        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1,2,4,6,19,20,89,100,199),999))
+        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1, 2, 4, 6, 19, 20, 89, 100, 199), 999))
     }
 
     @Test
     fun shouldReturnUnsuccessfulOnLessThenLowerBound() {
-        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1,2,4,6,19,20,89,100,199),0))
+        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1, 2, 4, 6, 19, 20, 89, 100, 199), 0))
     }
 
     @Test
     fun shouldReturnUnsuccessfulOnGreaterThenUpperBound() {
-        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1,2,4,6,19,20,89,100,199),200))
+        assertEquals(UNSUCCESSFUL, linearSearch(arrayOf(1, 2, 4, 6, 19, 20, 89, 100, 199), 200))
     }
 
     @Test
     fun shouldReturnSuccessfulWhenInTheList() {
-        assertEquals(100, linearSearch(arrayOf(1,2,4,6,19,20,89,100,199),100))
+        assertEquals(100, linearSearch(arrayOf(1, 2, 4, 6, 19, 20, 89, 100, 199), 100))
     }
 
 }

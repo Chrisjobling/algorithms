@@ -5,11 +5,11 @@ Linear search finds the element within a list by checking each element. The wors
 if every element must be checked
  */
 
-fun linearSearch(numbers : Array<Int>, targetValue: Int): Int {
+fun linearSearch(numbers: Array<Int>, targetValue: Int): Int {
     numbers.forEach {
-       if(it == targetValue) {
-           return targetValue
-       }
+        if (it == targetValue) {
+            return targetValue
+        }
     }
     return -1
 }

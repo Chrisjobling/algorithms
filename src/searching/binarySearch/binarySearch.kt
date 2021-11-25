@@ -5,23 +5,23 @@ Binary search finds the position of a target value in a sorted array. The array 
 Runs in logarithmic time so is O(log n)
  */
 
-fun binarySearch(numbers : Array<Int>, targetValue: Int): Int {
+fun binarySearch(numbers: Array<Int>, targetValue: Int): Int {
     var low = 0
     var high = numbers.size - 1
-    var mid : Int
+    var mid: Int
     while (low <= high) {
         //finding the middle of the array
-        mid = ((high - low)/2) +low
+        mid = ((high - low) / 2) + low
         //Greater than the middle  so change the index to middle + 1, ie right side
-        if( targetValue > numbers[mid]) {
-            low = mid+1
+        if (targetValue > numbers[mid]) {
+            low = mid + 1
         }
         //Equal
-        if(targetValue == numbers[mid]) {
+        if (targetValue == numbers[mid]) {
             return mid
         }
         //Less than the middle so change the index to middle - 1, ie left side
-        if(targetValue < numbers[mid]) {
+        if (targetValue < numbers[mid]) {
             high = mid - 1
         }
     }
